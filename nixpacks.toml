@@ -1,3 +1,6 @@
+[variables]
+NIXPACKS_PKGS_ARCHIVE = "https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-24.11.tar.gz"
+
 [phases.install]
 cmds = ["python3 -m pip install -r backend/requirements.txt"]
 
