@@ -1,8 +1,11 @@
 [variables]
 NIXPACKS_PKGS_ARCHIVE = "https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-24.11.tar.gz"
 
+[phases.setup]
+nixPkgs = ["python311", "python311Packages.pip", "gcc"]
+
 [phases.install]
-cmds = ["python3 -m pip install -r backend/requirements.txt"]
+cmds = ["python3.11 -m pip install -r backend/requirements.txt"]
 
 [phases.build]
 cmds = []
